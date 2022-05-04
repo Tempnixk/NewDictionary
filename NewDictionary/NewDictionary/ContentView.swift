@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(dictionaries) { dictionary in
-                NavigationLink(destination: DetailView(dictionary: dictionary)) {
+                NavigationLink(destination: DictView(dictionary: dictionary)) {
                     DictionaryRow(dictionary: dictionary)
                 }
             }
@@ -27,9 +27,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct DictionaryRow: View {
-    
     let dictionary: Dictionary
-    
     var body: some View {
             VStack(alignment: .leading) {
                 Text(dictionary.title)

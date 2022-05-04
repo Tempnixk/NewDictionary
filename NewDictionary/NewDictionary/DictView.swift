@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-struct DetailView: View {
+struct DictView: View {
     
     let dictionary: Dictionary
     
     var body: some View {
+    
         VStack {
             
-            Text(dictionary.title)
-                .font(.title)
-                .fontWeight(.medium)
+//            Text(dictionary.title)
+//                .font(.title)
+//                .fontWeight(.medium)
             Form {
                 HStack {
                     Spacer()
@@ -25,7 +26,8 @@ struct DetailView: View {
                         .font(.callout)
                     Spacer()
                    
-                }
+                }.navigationTitle(Text(dictionary.title)
+)
                 VStack {
                     HStack{
                         Spacer()
@@ -81,6 +83,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(dictionary: dictionaries[0])
+        DictView(dictionary: dictionaries[0])
     }
 }
