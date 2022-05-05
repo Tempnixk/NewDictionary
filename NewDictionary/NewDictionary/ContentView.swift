@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showFavoritesOnly = false
+
+    var filteredDictionarys: [Dict] {
+        dictionaries.filter { dictionary in
+            (!showFavoritesOnly || dictionary.isFavorite)
+        }
+    }
     var body: some View {
         NavigationView {
             List(dictionaries) { dictionary in
@@ -26,14 +33,3 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct DictionaryRow: View {
-    let dictionary: Dictionary
-    var body: some View {
-            VStack(alignment: .leading) {
-                Text(dictionary.title)
-                    .font(.system(size: 21, weight: .medium, design: .default))
-                Text(dictionary.subtitle)
-                    .foregroundColor(.gray)
-            }
-    }
-}

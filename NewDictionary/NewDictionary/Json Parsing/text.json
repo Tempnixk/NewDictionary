@@ -1,0 +1,573 @@
+[
+    {
+        "title" : "Arrays",
+        "subtitle" : "Collection Types",
+        "summary" : "An ordered, random-access collection.",
+        "declaration" : "@frozen struct Array<Element>",
+        "overview" : "Arrays are one of the most commonly used data types in an app. You use arrays to organize your app’s data. Specifically, you use the Array type to hold elements of a single type, the array’s Element type. An array can store any kind of elements—from integers to strings to classes. Swift makes it easy to create arrays in your code using an array literal: simply surround a comma-separated list of values with square brackets. Without any other information, Swift creates an array that includes the specified values, automatically inferring the array’s Element type. ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Dictionaries",
+        "subtitle" : "Collection Types",
+        "summary" : "A collection whose elements are key-value pairs.",
+        "declaration" : "@frozen struct Dictionary<Key, Value> where Key : Hashable",
+        "overview" : "A dictionary is a type of hash table, providing fast access to the entries it contains. Each entry in the table is identified using its key, which is a hashable type such as a string or number. You use that key to retrieve the corresponding value, which can be any object. In other languages, similar data types are known as hashes or associated arrays. Create a new dictionary by using a dictionary literal. A dictionary literal is a comma-separated list of key-value pairs, in which a colon separates each key from its associated value, surrounded by square brackets. You can assign a dictionary literal to a variable or constant or pass it to a function that expects a dictionary.",
+        "isFavorite": false
+    },
+    {
+        "title" : "Sets",
+        "subtitle" : "Collection Types",
+        "summary" : "An unordered collection of unique elements.",
+        "declaration" : "@frozen struct Set<Element> where Element : Hashable",
+        "overview" : "You use a set instead of an array when you need to test efficiently for membership and you aren’t concerned with the order of the elements in the collection, or when you need to ensure that each element appears only once in a collection. You can create a set with any element type that conforms to the Hashable protocol. By default, most types in the standard library are hashable, including strings, numeric and Boolean types, enumeration cases without associated values, and even sets themselves. Swift makes it as easy to create a new set as to create a new array. Simply assign an array literal  to a variable or constant with the Set type specified. ordered, random-access collection.",
+        "isFavorite": false
+    },
+    {
+        "title" : "if/else",
+        "subtitle" : "Conditional Statements",
+        "summary" : "It executes a set of statements only if that condition is true.",
+        "declaration" : "if _condition_  { code } else { code }",
+        "overview" : "The if statement can provide an alternative set of statements, known as an else clause, for situations when the if condition is false. These statements are indicated by the else keyword.",
+        "isFavorite": false
+    },
+    {
+        "title" : "switch/case",
+        "subtitle" : "Conditional Statements",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "guard",
+        "subtitle" : "Conditional Statements",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Comparison Operators",
+        "subtitle" : "Conditional Statements",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Ternary Conditional Operator",
+        "subtitle" : "Conditional Statements",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Logical Operators",
+        "subtitle" : "Conditional Statements",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Control Transfer Statements",
+        "subtitle" : "Conditional Statements",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Checking API Availability",
+        "subtitle" : "Conditional Statements",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Binding",
+        "subtitle" : "Data",
+        "summary" : "A property wrapper type that can read and write a value owned by a source of truth.",
+        "declaration" : "@frozen @propertyWrapper @dynamicMemberLookup struct Binding<Value>",
+        "overview" : "Use a binding to create a two-way connection between a property that stores data, and a view that displays and changes the data. A binding connects a property to a source of truth stored elsewhere, instead of storing data directly. For example, a button that toggles between play and pause can create a binding to a property of its parent view using the Binding property wrapper.",
+        "isFavorite": false
+    },
+    {
+        "title" : "State",
+        "subtitle" : "Data",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "ObservedObject",
+        "subtitle" : "Data",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "EnvironmentObject",
+        "subtitle" : "Data",
+        "summary" : "Supplies an ObservableObject to a view subhierarchy.",
+        "declaration" : "func environmentObject<T>(_ object: T) -> some View where T : ObservableObject",
+        "overview" : "-",
+        "isFavorite": false
+    },
+    {
+        "title" : "StateObject",
+        "subtitle" : "Data",
+        "summary" : "A property wrapper type that instantiates an observable object.",
+        "declaration" : "@frozen @propertyWrapper struct StateObject<ObjectType> where ObjectType : ObservableObject",
+        "overview" : " Create a state object in a View, App, or Scene by applying the @StateObject attribute to a property declaration and providing an initial value that conforms to the ObservableObject protocol",
+        "isFavorite": false
+    },
+    {
+        "title" : "ObservableObject",
+        "subtitle" : "Data",
+        "summary" : "A type of object with a publisher that emits before the object has changed.",
+        "declaration" : "protocol ObservableObject : AnyObject",
+        "overview" : "By default an ObservableObject synthesizes an objectWillChange publisher that emits the changed value before any of its @Published properties changes.",
+        "isFavorite": false
+    },
+    {
+        "title" : "FocusedBinding",
+        "subtitle" : "Data",
+        "summary" : "A convenience property wrapper for observing and automatically unwrapping state bindings from the focused view or one of its ancestors.",
+        "declaration" : "@propertyWrapper struct FocusedBinding<Value>",
+        "overview" : "If multiple views publish bindings using the same key, the wrapped property will reflect the value of the binding from the view closest to focus.",
+        "isFavorite": false
+    },
+    {
+        "title" : "FocusedValue",
+        "subtitle" : "Data",
+        "summary" : "A property wrapper for observing values from the focused view or one of its ancestors.",
+        "declaration" : "@propertyWrapper struct FocusedValue<Value>",
+        "overview" : "If multiple views publish values using the same key, the wrapped property will reflect the value from the view closest to focus.",
+        "isFavorite": false
+    },
+    {
+        "title" : "Environment",
+        "subtitle" : "Data",
+        "summary" : "Sets the environment value of the specified key path to the given value.",
+        "declaration" : "func environment<V>(_ keyPath: WritableKeyPath<EnvironmentValues, V>, _ value: V) -> some View",
+        "overview" : "-",
+        "isFavorite": false
+    },
+    {
+        "title" : "PreferenceKey",
+        "subtitle" : "Data",
+        "summary" : "A named value produced by a view.",
+        "declaration" : "protocol PreferenceKey",
+        "overview" : "A view with multiple children automatically combines its values for a given preference into a single value visible to its ancestors.",
+        "isFavorite": false
+    },
+    {
+        
+        "title" : "AppStorage",
+        "subtitle" : "Data",
+        "summary" : "A property wrapper type that reflects a value from UserDefaults and invalidates a view on a change in value in that user default.",
+        "declaration" : "@frozen @propertyWrapper struct AppStorage<Value>",
+        "overview" : "-",
+        "isFavorite": false
+    },
+    {
+        "title" : "SceneStorage",
+        "subtitle" : "Data",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "FetchRequest",
+        "subtitle" : "Data",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Transaction",
+        "subtitle" : "Data",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "enum",
+        "subtitle" : "Enum",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Associated Values",
+        "subtitle" : "Enum",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Raw Values",
+        "subtitle" : "Enum",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "func",
+        "subtitle" : "Functions",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Parameters and return value",
+        "subtitle" : "Functions",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Argument Labels and Parameter Names",
+        "subtitle" : "Functions",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "For-In",
+        "subtitle" : "Loops",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "While",
+        "subtitle" : "Loops",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Repeat-While",
+        "subtitle" : "Loops",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Instance Methods",
+        "subtitle" : "Methods",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Type Methods",
+        "subtitle" : "Methods",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Basic operators",
+        "subtitle" : "Operations",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Assignment Operator",
+        "subtitle" : "Operations",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Arithmetic Operators",
+        "subtitle" : "Operations",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Range Operators",
+        "subtitle" : "Operations",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        
+        "title" : "Compound Assignment Operators",
+        "subtitle" : "Operations",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "nil",
+        "subtitle" : "Optionals",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Forced Unwrapping",
+        "subtitle" : "Optionals",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Optional Binding",
+        "subtitle" : "Optionals",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Implicitly Unwrapped Optionals",
+        "subtitle" : "Optionals",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Nil-Coalescing Operator",
+        "subtitle" : "Optionals",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Optional Chaining",
+        "subtitle" : "Optionals",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Stored Properties",
+        "subtitle" : "Properties",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Computed Properties",
+        "subtitle" : "Properties",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Property Observers",
+        "subtitle" : "Properties",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Property Wrappers",
+        "subtitle" : "Properties",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Global and Local Variables",
+        "subtitle" : "Properties",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Type Properties",
+        "subtitle" : "Properties",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "struct",
+        "subtitle" : "Structures / Classes",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "class",
+        "subtitle" : "Structures / Classes",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "value type vs reference type",
+        "subtitle" : "Structures / Classes",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Int",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Double",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Numeric Literals",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Numeric Type Conversion",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Bool",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "String Literals",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Empty String",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "String Interpolation",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "String Mutability",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Strings as Value Types",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Working with Characters",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Unicode",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Counting Characters",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Modifying a String",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    },
+    {
+        "title" : "Substrings",
+        "subtitle" : "Type",
+        "summary" : " ",
+        "declaration" : " ",
+        "overview" : " ",
+        "isFavorite": false
+    }
+    
+]

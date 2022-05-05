@@ -13,7 +13,11 @@
 		7126E4292821004100310FA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7126E4282821004100310FA5 /* Preview Assets.xcassets */; };
 		7126E4302821006B00310FA5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7126E42F2821006B00310FA5 /* SearchBar.swift */; };
 		7126E432282115A100310FA5 /* DictView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7126E431282115A100310FA5 /* DictView.swift */; };
-		7126E434282115BD00310FA5 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7126E433282115BD00310FA5 /* Dictionary.swift */; };
+		7126E434282115BD00310FA5 /* Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7126E433282115BD00310FA5 /* Dict.swift */; };
+		71B0D7C22822C1B2003293E9 /* text.json in Resources */ = {isa = PBXBuildFile; fileRef = 71B0D7C12822C1B2003293E9 /* text.json */; };
+		71B0D7C42823F6C8003293E9 /* DictionaryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B0D7C32823F6C8003293E9 /* DictionaryRow.swift */; };
+		71F117EA2822357E00CA5D5B /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 71F117E92822357E00CA5D5B /* test.json */; };
+		71F117EC2822466F00CA5D5B /* jsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F117EB2822466F00CA5D5B /* jsonDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +28,11 @@
 		7126E4282821004100310FA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7126E42F2821006B00310FA5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		7126E431282115A100310FA5 /* DictView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictView.swift; sourceTree = "<group>"; };
-		7126E433282115BD00310FA5 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		7126E433282115BD00310FA5 /* Dict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dict.swift; sourceTree = "<group>"; };
+		71B0D7C12822C1B2003293E9 /* text.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = text.json; sourceTree = "<group>"; };
+		71B0D7C32823F6C8003293E9 /* DictionaryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryRow.swift; sourceTree = "<group>"; };
+		71F117E92822357E00CA5D5B /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		71F117EB2822466F00CA5D5B /* jsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,7 @@
 		7126E4152821003E00310FA5 = {
 			isa = PBXGroup;
 			children = (
+				71B0D7C32823F6C8003293E9 /* DictionaryRow.swift */,
 				7126E4202821003E00310FA5 /* NewDictionary */,
 				7126E41F2821003E00310FA5 /* Products */,
 			);
@@ -61,9 +70,10 @@
 				7126E4212821003E00310FA5 /* NewDictionaryApp.swift */,
 				7126E4232821003E00310FA5 /* ContentView.swift */,
 				7126E431282115A100310FA5 /* DictView.swift */,
+				7126E433282115BD00310FA5 /* Dict.swift */,
 				7126E4252821004100310FA5 /* Assets.xcassets */,
 				7126E4272821004100310FA5 /* Preview Content */,
-				7126E433282115BD00310FA5 /* Dictionary.swift */,
+				71F117ED28224E7B00CA5D5B /* Json Parsing */,
 			);
 			path = NewDictionary;
 			sourceTree = "<group>";
@@ -74,6 +84,16 @@
 				7126E4282821004100310FA5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		71F117ED28224E7B00CA5D5B /* Json Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				71F117EB2822466F00CA5D5B /* jsonDecoder.swift */,
+				71F117E92822357E00CA5D5B /* test.json */,
+				71B0D7C12822C1B2003293E9 /* text.json */,
+			);
+			path = "Json Parsing";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +156,8 @@
 			files = (
 				7126E4292821004100310FA5 /* Preview Assets.xcassets in Resources */,
 				7126E4262821004100310FA5 /* Assets.xcassets in Resources */,
+				71B0D7C22822C1B2003293E9 /* text.json in Resources */,
+				71F117EA2822357E00CA5D5B /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F117EC2822466F00CA5D5B /* jsonDecoder.swift in Sources */,
 				7126E432282115A100310FA5 /* DictView.swift in Sources */,
-				7126E434282115BD00310FA5 /* Dictionary.swift in Sources */,
+				7126E434282115BD00310FA5 /* Dict.swift in Sources */,
+				71B0D7C42823F6C8003293E9 /* DictionaryRow.swift in Sources */,
 				7126E4242821003E00310FA5 /* ContentView.swift in Sources */,
 				7126E4222821003E00310FA5 /* NewDictionaryApp.swift in Sources */,
 				7126E4302821006B00310FA5 /* SearchBar.swift in Sources */,

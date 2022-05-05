@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DictView: View {
     
-    let dictionary: Dictionary
+    let dictionary: Dict
     
     var body: some View {
     
@@ -67,9 +67,9 @@ struct DictView: View {
                     HStack{
                         Spacer()
                         Button(action: {
-                            print("Favorite")
+                            print("Bookmark")
                         }) {
-                            Text("Add to Favorite")
+                            Text("Add to Bookmark")
                         }
                         Spacer()
                         
